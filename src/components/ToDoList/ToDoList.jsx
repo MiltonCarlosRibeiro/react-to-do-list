@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import useLocalStorage from "./useLocalStorage";
-
+import Swal from "sweetalert";
 
 function ToDoList() {
 
@@ -12,20 +12,43 @@ function ToDoList() {
     }
 
     function addTask() {
-        if (newTask.trim() !== "") {
-            setTasks(t => [...t, newTask]);
-            setNewTask("");
+        if (newTask.trim() === "") {
+            Swal("Oops!", "You cannot add an empty task!", "warning"); // Alert for empty task
+            return;
         }
+        setTasks((t) => [...t, newTask]);
+        setNewTask("");
     }
 
     function deleteTask(index) {
-        const updatedTasks = tasks.filter((_, i) => i !== index);
-        setTasks(updatedTasks);
-
+        Swal({
+            title: "Are you sure?",
+            text: "Do you want to delete this task?",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                const updatedTasks = tasks.filter((_, i) => i !== index);
+                setTasks(updatedTasks);
+                Swal("Deleted!", "Your task has been deleted.", "success");
+            }
+        });
     }
 
     function deleteAllTasks() {
-        setTasks([]);
+        Swal({
+            title: "Are you sure?",
+            text: "Do you want to delete all tasks?",
+            icon: "warning",
+            buttons: ["Cancel", "Delete All"],
+            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                setTasks([]);
+                Swal("Deleted!", "All tasks have been deleted.", "success");
+            }
+        });
     }
 
 
