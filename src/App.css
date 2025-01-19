@@ -1,0 +1,130 @@
+.to-do-list {
+    font-family: 'Poppins', Arial, sans-serif;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 600px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.add-button {
+    background-color: #4caf50;
+}
+
+.add-button:hover {
+    background-color: #43a047;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.move-button {
+    background-color: #3498db;
+}
+
+.move-button:hover {
+    background-color: #2980b9;
+}
+
+input[type="text"] {
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 2px solid #dcdcdc;
+    border-radius: 6px;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+    display: block;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+ol {
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+}
+
+
+li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 15px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.delete-button, .move-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    li {
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .delete-button, .move-button {
+        margin-left: 0;
+        margin-top:10px;
+        }
+}
