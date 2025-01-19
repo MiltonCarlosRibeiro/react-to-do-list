@@ -4,7 +4,7 @@ import useLocalStorage from "./useLocalStorage";
 
 function ToDoList() {
 
-    const [tasks, setTasks] = useLocalStorage("tasks", ["Teste", "Comer", "Andar"]);
+    const [tasks, setTasks] = useLocalStorage("tasks", []);
     const [newTask, setNewTask] = useState("");
 
     function handleInputChange(event) {
