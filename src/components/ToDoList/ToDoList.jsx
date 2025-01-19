@@ -1,9 +1,10 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
+import useLocalStorage from "./useLocalStorage.js";
 
 
 function ToDoList() {
 
-    const [tasks, setTasks] = useState(["Teste", "Comer", "Andar"])
+    const [tasks, setTasks] = useLocalStorage("tasks", ["Teste", "Comer","Andar"]);
     const [newTask, setNewTask] = useState("");
 
     function handleInputChange(event) {
