@@ -1,9 +1,9 @@
 .to-do-list {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     text-align: center;
     margin: 20px auto;
     padding: 20px;
-    background: linear-gradient(to bottom right, rgba(207, 196, 203, 0.25), #7b97b5);
+    background: linear-gradient(to bottom right, #4facfe, #00f2fe);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 90%;
@@ -12,9 +12,11 @@
     overflow-x: hidden;
 }
 
+
+
 h1 {
     font-size: 2.2rem;
-    color: #2f3032;
+    color: black;
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -52,6 +54,14 @@ button:active {
     background-color: #c0392b;
 }
 
+.delete-all-button {
+    background-color: #e74c3c;
+}
+
+.delete-all-button:hover {
+    background-color: #c0392b;
+}
+
 .move-button {
     background-color: #3498db;
 }
@@ -78,6 +88,19 @@ input[type="text"]:focus {
     border-color: #3498db;
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
+
+.input-div {
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
 
 ol {
     padding: 0;
@@ -152,6 +175,6 @@ li:hover {
 
     .delete-button, .move-button {
         margin-left: 0;
-        margin-top: 0;
-            }
+        margin-top:0;
+        }
 }
